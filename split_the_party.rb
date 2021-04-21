@@ -1,5 +1,6 @@
-require_relative 'and_splitter'
-require_relative 'give_me_some'
+require_relative 'methods/and_splitter'
+require_relative 'methods/give_me_some'
+require_relative 'methods/assign_tas_to_rooms'
 
 number_of_rooms = 0
 while number_of_rooms.zero?
@@ -14,17 +15,8 @@ tas = give_me_some('TA')
 rooms_per_ta = number_of_rooms / tas.length
 counter = 1
 
-result = {}
+result = assign_tas_to_rooms(tas, rooms_per_ta)
 
-tas = tas.shuffle
-tas.each do |ta|
-  result[ta] = []
-
-  rooms_per_ta.times do |_x|
-    result[ta] << "Room #{counter}"
-    counter += 1
-  end
-end
 
 puts %(
   :party-deploy: Let's split the party! @aqui :gandalf_party:
