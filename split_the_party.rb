@@ -12,11 +12,11 @@ puts 'What are the goals for today?'
 goals = give_me_some('Goal')
 tas = give_me_some('TA')
 
-rooms_per_ta = number_of_rooms / tas.length
+rooms_per_ta = number_of_rooms.fdiv tas.length
 counter = 1
 
-result = assign_tas_to_rooms(tas, rooms_per_ta, counter)
-p result
+rooms_tas = assign_tas_to_rooms(tas, rooms_per_ta, counter)
+p rooms_tas
 
 puts %(
   :party-deploy: Let's split the party! @here :gandalf_party:
@@ -27,7 +27,7 @@ puts %(
 
   Rooms:
   #{
-    result.map do |ta, rooms|
+    rooms_tas.map do |ta, rooms|
       "#{ta} -> #{and_splitter(rooms)}"
     end.join("\n  ")
   }
