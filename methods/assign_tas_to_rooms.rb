@@ -1,4 +1,4 @@
-def assign_tas_to_rooms(tas, rooms_per_ta)
+def assign_tas_to_rooms(tas, rooms_per_ta, counter)
   result = {}
   
   tas = tas.shuffle
@@ -10,4 +10,6 @@ def assign_tas_to_rooms(tas, rooms_per_ta)
       counter += 1
     end
   end
+  
+  result
 end

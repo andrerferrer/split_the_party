@@ -15,11 +15,11 @@ tas = give_me_some('TA')
 rooms_per_ta = number_of_rooms / tas.length
 counter = 1
 
-result = assign_tas_to_rooms(tas, rooms_per_ta)
-
+result = assign_tas_to_rooms(tas, rooms_per_ta, counter)
+p result
 
 puts %(
-  :party-deploy: Let's split the party! @aqui :gandalf_party:
+  :party-deploy: Let's split the party! @here :gandalf_party:
   Let's go around the tables when you have a break from tickets.
 
   #{'The goal is to give all kinds of support and:' unless goals.empty?}
