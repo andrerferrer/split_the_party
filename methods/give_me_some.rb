@@ -2,7 +2,7 @@ def give_me_some(something_name, options = {})
   result = []
   if options[:multiple]
     puts "give me multiple #{something_name} comma separated"
-    return gets.chomp.gsub(/['"]/, '').split(',')
+    return gets.chomp.gsub(/[^,\w\s]/, '').split(',')
   else
     puts "give me a #{something_name} or press Enter to finish"
   end
