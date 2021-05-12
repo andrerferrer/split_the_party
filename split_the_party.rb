@@ -10,7 +10,7 @@ end
 
 puts 'What are the goals for today?'
 goals = give_me_some('Goal')
-tas = give_me_some('TA')
+tas = give_me_some('TA', multiple: true)
 
 rooms_per_ta = number_of_rooms.fdiv tas.length
 counter = 1
