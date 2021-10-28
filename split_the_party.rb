@@ -32,6 +32,6 @@ puts %(
     end.join("\n  ")
   }
 
-  I'll personally check the ones on the bottom
+  I'll personally check the ones on the bottom and the ones with a poor style
   Please report your takeaways here after you do it
 )
