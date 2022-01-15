@@ -16,7 +16,9 @@ rooms_per_ta = number_of_rooms.fdiv tas.length
 counter = 1
 
 rooms_tas = assign_tas_to_rooms(tas, rooms_per_ta, counter)
-p rooms_tas
+# p rooms_tas
+
+puts `clear`
 
 puts %(
   :party-deploy: Let's split the party! @here :gandalf_party:
