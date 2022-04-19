@@ -1,3 +1,2 @@
-// go to the homepage and run
-// https://kitt.lewagon.com/camps/999
+// go to the https://kitt.lewagon.com/camps/999 (replacing 999 with the batch number) and run
 [ ...document.querySelectorAll('.tas a') ].map( e => e.children[0].dataset.title ).join(',')
